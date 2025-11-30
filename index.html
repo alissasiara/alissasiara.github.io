@@ -1,10 +1,117 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8" />
-    <title>My Website</title>
-  </head>
-  <body>
-    <h1>Hello! My website is working 🎉</h1>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name</title>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid #ddd;
+            background: #fafafa;
+        }
+
+        header img {
+            width: 120px; /* ~3cm on most screens */
+            height: auto;
+            border-radius: 6px;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav {
+            margin-left: 40px;
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <!-- Replace "header.jpg" with your photo filename -->
+    <img src="header.jpg" alt="Your photo">
+
+    <div>
+        <h1>Your Name</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<div class="content">
+    <section id="about">
+        <h2>About</h2>
+        <p>
+            Write a short introduction about yourself here. You can describe who you are,
+            your research interests, your institutional affiliation, or anything else you want
+            visitors to know first.
+        </p>
+    </section>
+
+    <section id="research">
+        <h2>Research</h2>
+        <p>
+            Add descriptions of your research topics, dissertation, projects, etc.
+        </p>
+    </section>
+
+    <section id="publications">
+        <h2>Publications</h2>
+        <ul>
+            <li>Article or working paper 1</li>
+            <li>Article or working paper 2</li>
+            <li>Book chapter</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+            Twitter: @yourhandle
+        </p>
+    </section>
+</div>
+
+</body>
 </html>
