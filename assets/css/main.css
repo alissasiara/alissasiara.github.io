@@ -2550,15 +2550,12 @@ input, select, textarea {
 				border: 0;
 			}
 
-	#nav {
-		cursor: default;
-		background-color: #333;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
-		background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.3)), url("images/bg01.png");
-		padding: 0;
-	}
+#nav {
+    cursor: default;
+    background-color: #37c0fb;   /* blue instead of black */
+    background-image: none;      /* remove dark gradient + texture */
+    padding: 0;
+}
 
 		#nav > ul {
 			margin: 0;
