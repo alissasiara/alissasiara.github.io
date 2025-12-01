@@ -13,90 +13,111 @@
 
 		<!-- HOMEPAGE-ONLY STYLES -->
 		<style>
-
-			/* WHITE NAV BAR ONLY ON INDEX */
-			.home-nav-style #nav {
-				background-color: white !important;
-				background-image: none !important;
-			}
-
-			/* 🔥 BIGGER + WIDER NAV TEXT WITH IMAGE FILL 🔥 */
-			.home-nav-style #nav > ul > li a {
-				text-decoration: none;
-				border: 0;
-				display: block;
-
-				/* MORE SPACE AROUND TEXT */
-				padding: 1.8em 1em 1.6em 1em;
-
-				/* BIG + BOLD */
-				font-size: 2rem;         /* adjust if you want even bigger */
-				font-weight: 800;
-
-				/* WIDER LETTER SPACING */
-				letter-spacing: 0.08em;
-
-				/* PICTURE FILL IN TEXT */
+			/* Banner with painting as background */
+			.home-nav-style #banner {
 				background-image: url("images/banner.jpg");
 				background-size: cover;
-				background-repeat: no-repeat;
 				background-position: center top;
-				-webkit-background-clip: text;
-				color: transparent;
-
-				transition: all 0.3s ease;
+				background-repeat: no-repeat;
+				height: 380px;           /* adjust height if you want more/less painting */
+				position: relative;
 			}
 
-			/* Hover = brighter picture fill */
-			.home-nav-style #nav > ul > li:hover a {
-				filter: brightness(1.3);
-				color: transparent;
-				-webkit-background-clip: text;
+			/* Nav positioned over the lower edge of the painting */
+			.home-nav-style #banner .nav-over-banner {
+				position: absolute;
+				bottom: 0;              /* sits at the bottom of the banner */
+				left: 0;
+				width: 100%;
+				background: transparent; /* no bar background, just text on image */
+				text-align: center;
+				padding-bottom: 0.5em;
 			}
 
-			/* Current page = bold but still picture-filled */
-			.home-nav-style #nav > ul > li.current a,
-			.home-nav-style #nav > ul > li.active a {
+			/* Reset list styling inside this nav */
+			.home-nav-style #banner .nav-over-banner > ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.home-nav-style #banner .nav-over-banner > ul > li {
+				display: inline-block;
+				margin: 0 0.5em;
+			}
+
+			/* BIG, BOLD NAV TEXT WITH IMAGE FILL */
+			.home-nav-style #banner .nav-over-banner > ul > li a {
+				text-decoration: none;
+				display: inline-block;
+
+				/* spacing around each word */
+				padding: 0.3em 0.7em;
+
+				/* font styling */
+				font-size: 2rem;
+				font-weight: 800;
+				letter-spacing: 0.02em;
+
+				/* picture fill */
+				color: transparent;
+				-webkit-text-fill-color: transparent;
+				-webkit-background-clip: text;
+				background-clip: text;
+
+				/* approximate continuation using same image */
+				background-image: url("images/banner.jpg");
+				background-size: cover;
+				background-position: center bottom;
+
+				transition: filter 0.3s ease;
+			}
+
+			/* Hover: slightly brighter */
+			.home-nav-style #banner .nav-over-banner > ul > li:hover a {
+				filter: brightness(1.2);
+			}
+
+			/* Current/active page: a bit bolder */
+			.home-nav-style #banner .nav-over-banner > ul > li.current a,
+			.home-nav-style #banner .nav-over-banner > ul > li.active a {
 				font-weight: 900;
-				color: transparent;
-				-webkit-background-clip: text;
 			}
-
 		</style>
 	</head>
 
 	<body class="is-preload home-nav-style">
 		<div id="page-wrapper">
 
-			<!-- Banner -->
+			<!-- Banner WITH nav inside -->
 			<section id="banner">
+				<nav id="nav" class="nav-over-banner">
+					<ul>
+						<li class="current"><a href="index.html">Alissa Siara</a></li>
+						<li><a href="About.html">About</a></li>
+						<li><a href="Publications.html">Publications</a></li>
+						<li><a href="Teaching.html">Teaching</a></li>
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="Contact.html">Contact</a></li>
+					</ul>
+				</nav>
 			</section>
 
-		</div>
+			<!-- You can add main content here later if you want -->
 
-		<!-- Navigation -->
-		<nav id="nav">
-			<ul>
-				<li class="current"><a href="index.html">Alissa Siara</a></li>
-				<li><a href="About.html">About</a></li>
-				<li><a href="Publications.html">Publications</a></li>
-				<li><a href="Teaching.html">Teaching</a></li>
-				<li><a href="CV.html">CV</a></li>
-				<li><a href="Contact.html">Contact</a></li>
-			</ul>
-		</nav>
-
-		<!-- Footer -->
-		<div id="footer">
-			<div class="container">
-				<div class="copyright">
-					<ul class="menu">
-						<li>&copy; 2025 Alissa Siara. All rights reserved.</li>
-						<li>Design: HTML5 UP</li>
-						<li>Painting: Tarsila do Amaral</li>
-					</ul>
+			<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+					<div class="copyright">
+						<ul class="menu">
+							<li>&copy; 2025 Alissa Siara. All rights reserved.</li>
+							<li>Design: HTML5 UP</li>
+							<li>Painting: Tarsila do Amaral</li>
+						</ul>
+					</div>
 				</div>
 			</div>
+
 		</div>
 
 		<!-- Scripts -->
@@ -109,6 +130,3 @@
 
 	</body>
 </html>
-
-
-
