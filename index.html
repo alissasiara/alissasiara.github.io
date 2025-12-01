@@ -14,52 +14,106 @@
 		<!-- HOMEPAGE-ONLY STYLES -->
 		<style>
 
-			/* WHITE NAV BAR ONLY ON INDEX */
-			.home-nav-style #nav {
-				background-color: white !important;
-				background-image: none !important;
-			}
-
-			/* 🔥 BIGGER + WIDER NAV TEXT WITH IMAGE FILL 🔥 */
-			.home-nav-style #nav > ul > li a {
-				text-decoration: none;
-				border: 0;
-				display: block;
-
-				/* MORE SPACE AROUND TEXT */
-				padding: 1.8em 1em 1.6em 1em;
-
-				/* BIG + BOLD */
-				font-size: 2rem;         /* adjust if you want even bigger */
-				font-weight: 800;
-
-				/* WIDER LETTER SPACING */
-				letter-spacing: 0.08em;
-
-				/* PICTURE FILL IN TEXT */
+			/* --- Banner background --- */
+			#banner {
 				background-image: url("images/banner.jpg");
 				background-size: cover;
-				background-repeat: no-repeat;
 				background-position: center top;
-				-webkit-background-clip: text;
-				color: transparent;
-
-				transition: all 0.3s ease;
+				background-repeat: no-repeat;
+				height: 380px;
+				position: relative;
 			}
 
-			/* Hover = brighter picture fill */
-			.home-nav-style #nav > ul > li:hover a {
-				filter: brightness(1.3);
-				color: transparent;
-				-webkit-background-clip: text;
+			/* --- Nav on white strip at bottom of banner --- */
+			#banner .nav-over-banner {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				background: rgba(255, 255, 255, 0.95);
+				text-align: center;
+				padding: 0.6em 0 0.8em 0;
 			}
 
-			/* Current page = bold but still picture-filled */
-			.home-nav-style #nav > ul > li.current a,
-			.home-nav-style #nav > ul > li.active a {
+			#banner .nav-over-banner > ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			#banner .nav-over-banner > ul > li {
+				display: inline-block;
+				margin: 0 0.4em;
+			}
+
+			/* --- DESKTOP NAV TEXT (big, bold, painting fill) --- */
+			#banner .nav-over-banner > ul > li a {
+				text-decoration: none;
+				display: inline-block;
+
+				/* desktop spacing */
+				padding: 0.25em 0.7em;
+
+				font-size: 2rem;
+				font-weight: 800;
+				letter-spacing: 0.02em;
+
+				/* painting fill */
+				color: transparent;
+				-webkit-text-fill-color: transparent;
+				-webkit-background-clip: text;
+				background-clip: text;
+
+				/* zoom and reposition to soften */
+				background-image: url("images/banner.jpg");
+				background-size: 250% auto;
+				background-position: center 40%;
+				background-repeat: no-repeat;
+
+				transition: filter 0.3s ease;
+			}
+
+			#banner .nav-over-banner > ul > li:hover a {
+				filter: brightness(1.15);
+			}
+
+			#banner .nav-over-banner > ul > li.current a {
 				font-weight: 900;
-				color: transparent;
-				-webkit-background-clip: text;
+			}
+
+
+			/* ----------------------- */
+			/* 📱 MOBILE OVERRIDES     */
+			/* ----------------------- */
+			@media screen and (max-width: 736px) {
+
+				#banner {
+					height: 260px; /* smaller banner on phones */
+				}
+
+				#banner .nav-over-banner {
+					padding: 0.5em 0 0.6em 0;
+				}
+
+				#banner .nav-over-banner > ul > li {
+					display: block;        /* vertical list */
+					margin: 0.2em 0;
+				}
+
+				#banner .nav-over-banner > ul > li a {
+					/* smaller readable text */
+					font-size: 1.2rem;
+					font-weight: 700;
+					letter-spacing: 0.01em;
+
+					/* tighter spacing */
+					padding: 0.4em 0.3em;
+
+					/* clean solid color instead of painting fill */
+					background-image: none;
+					-webkit-background-clip: border-box;
+					color: #0f3d4d;
+				}
 			}
 
 		</style>
@@ -68,35 +122,33 @@
 	<body class="is-preload home-nav-style">
 		<div id="page-wrapper">
 
-			<!-- Banner -->
+			<!-- Banner WITH nav inside -->
 			<section id="banner">
+				<nav id="nav" class="nav-over-banner">
+					<ul>
+						<li class="current"><a href="index.html">Alissa Siara</a></li>
+						<li><a href="About.html">About</a></li>
+						<li><a href="Publications.html">Publications</a></li>
+						<li><a href="Teaching.html">Teaching</a></li>
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="Contact.html">Contact</a></li>
+					</ul>
+				</nav>
 			</section>
 
-		</div>
-
-		<!-- Navigation -->
-		<nav id="nav">
-			<ul>
-				<li class="current"><a href="index.html">Alissa Siara</a></li>
-				<li><a href="About.html">About</a></li>
-				<li><a href="Publications.html">Publications</a></li>
-				<li><a href="Teaching.html">Teaching</a></li>
-				<li><a href="CV.html">CV</a></li>
-				<li><a href="Contact.html">Contact</a></li>
-			</ul>
-		</nav>
-
-		<!-- Footer -->
-		<div id="footer">
-			<div class="container">
-				<div class="copyright">
-					<ul class="menu">
-						<li>&copy; 2025 Alissa Siara. All rights reserved.</li>
-						<li>Painting: Tarsila do Amaral</li>
-						<li>Design: HTML5 UP</li>
-					</ul>
+			<!-- Footer -->
+			<div id="footer">
+				<div class="container">
+					<div class="copyright">
+						<ul class="menu">
+							<li>&copy; 2025 Alissa Siara. All rights reserved.</li>
+							<li>Painting: Tarsila do Amaral</li>
+							<li>Design: HTML5 UP</li>
+						</ul>
+					</div>
 				</div>
 			</div>
+
 		</div>
 
 		<!-- Scripts -->
