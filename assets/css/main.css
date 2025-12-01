@@ -2550,69 +2550,69 @@ input, select, textarea {
 				border: 0;
 			}
 
+/* NAV */
+
 #nav {
     cursor: default;
-    background-color: #010d47;   /* blue instead of black */
-    background-image: none;      /* remove dark gradient + texture */
+    background-color: #010d47;
+    background-image: none;
     padding: 0;
 }
 
-		#nav > ul {
-			margin: 0;
-		}
+#nav > ul {
+    margin: 0;
+}
 
-			#nav > ul > li {
-				position: relative;
-				display: inline-block;
-				margin-left: 1em;
-			}
+#nav > ul > li {
+    position: relative;
+    display: inline-block;
+    margin-left: 1em;
+}
 
-				#nav > ul > li a {
+#nav > ul > li a {
     text-decoration: none;
     border: 0;
     display: block;
-    padding: 1.5em 0.8em 1.35em 0.8em; /* a bit more horizontal space */
-    
-    font-size: 1.3rem;          /* bigger text */
-    font-weight: 700;           /* thicker */
+    padding: 1.5em 0.8em 1.35em 0.8em;
 
-    background-image: url("banner.jpg"); /* same image as banner */
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    /* IMPORTANT: correct path */
+    background-image: url("../images/banner.jpg");
+
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center top;  /* tweak this to shift the colors */
+    background-position: center top;
     -webkit-background-clip: text;
-    color: transparent;         /* text is now "cut out" of the image */
+    color: transparent;
 
     transition: all 0.3s ease;
 }
 
-				#nav > ul > li:first-child {
-					margin-left: 0;
-				}
+/* OPTIONAL: hover = slightly brighter, but STILL image text */
+#nav > ul > li:hover a {
+    filter: brightness(1.3);
+}
 
-				#nav > ul > li:hover a {
-					color: #fff;
-				}
+/* Keep the current page *bold*, but don't change color */
+#nav > ul > li.current a {
+    font-weight: 800;
+}
 
-				#nav > ul > li.current {
-					font-weight: 600;
-				}
+#nav > ul > li:first-child {
+    margin-left: 0;
+}
 
-					#nav > ul > li.current a {
-						color: #fff;
-					}
+/* Remove the color overriding that broke everything */
+#nav > ul > li.active a,
+#nav > ul > li.current a {
+    /* leave empty so image-text effect stays */
+}
 
-				#nav > ul > li.active a {
-					color: #fff;
-				}
-
-				#nav > ul > li.active.current:before {
-					opacity: 0;
-				}
-
-				#nav > ul > li > ul {
-					display: none;
-				}
+#nav > ul > li.active.current:before {
+    opacity: 0;
+}
 
 /* Dropotron */
 
