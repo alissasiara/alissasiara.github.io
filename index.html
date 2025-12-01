@@ -22,7 +22,6 @@
     				padding-right: 0.5em;
 			}
 
-			/* 🔥 DESKTOP: BIGGER + WIDER NAV TEXT WITH IMAGE FILL 🔥 */
 			.home-nav-style #nav > ul > li a {
 				text-decoration: none;
 				border: 0;
@@ -64,23 +63,14 @@
 				-webkit-background-clip: text;
 			}
 
-			/* 📱 MOBILE OVERRIDES: ONLY phones (<= 736px wide) */
+			/* MOBILE OVERRIDES: ONLY phones (<= 736px wide) */
 			@media screen and (max-width: 736px) {
 
-				.home-nav-style #nav > ul > li a {
-					/* smaller + tighter on phone */
-					font-size: 1.2rem !important;
-					font-weight: 700 !important;
-					letter-spacing: 0.02em !important;
-					padding: 0.8em 0.6em 0.8em 0.6em !important;
+				/* Hide the top horizontal nav on phones */
+		#nav {
+			display: none;
+		}
 
-					/* simpler solid color instead of image fill */
-					background-image: none !important;
-					-webkit-background-clip: border-box !important;
-					color: #0f3d4d !important;
-					filter: none !important;
-				}
-			}
 		</style>
 	</head>
 
@@ -141,6 +131,7 @@
 
 	</body>
 </html>
+
 
 
 
