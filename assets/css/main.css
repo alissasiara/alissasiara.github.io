@@ -2576,7 +2576,7 @@ input, select, textarea {
     font-size: 1.3rem;          /* bigger text */
     font-weight: 700;           /* thicker */
 
-    background-image: url("images/tarsila.jpg"); /* same image as banner */
+    background-image: url("banner.jpg"); /* same image as banner */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;  /* tweak this to shift the colors */
