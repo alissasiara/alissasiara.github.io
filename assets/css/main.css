@@ -2568,12 +2568,23 @@ input, select, textarea {
 			}
 
 				#nav > ul > li a {
-					color: #c0c0c0;
-					text-decoration: none;
-					border: 0;
-					display: block;
-					padding: 1.5em 0.5em 1.35em 0.5em;
-				}
+    text-decoration: none;
+    border: 0;
+    display: block;
+    padding: 1.5em 0.8em 1.35em 0.8em; /* a bit more horizontal space */
+    
+    font-size: 1.3rem;          /* bigger text */
+    font-weight: 700;           /* thicker */
+
+    background-image: url("images/tarsila.jpg"); /* same image as banner */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;  /* tweak this to shift the colors */
+    -webkit-background-clip: text;
+    color: transparent;         /* text is now "cut out" of the image */
+
+    transition: all 0.3s ease;
+}
 
 				#nav > ul > li:first-child {
 					margin-left: 0;
