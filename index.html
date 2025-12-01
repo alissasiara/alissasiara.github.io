@@ -19,19 +19,19 @@
 				background-size: cover;
 				background-position: center top;
 				background-repeat: no-repeat;
-				height: 380px;           /* adjust height if you want more/less painting */
+				height: 380px;          /* adjust to show more/less of the painting */
 				position: relative;
 			}
 
-			/* Nav positioned over the lower edge of the painting */
+			/* Nav positioned over the lower edge of the painting, on a white strip */
 			.home-nav-style #banner .nav-over-banner {
 				position: absolute;
-				bottom: 0;              /* sits at the bottom of the banner */
+				bottom: 0;              /* sits at the bottom of the banner area */
 				left: 0;
 				width: 100%;
-				background: transparent; /* no bar background, just text on image */
+				background: rgba(255, 255, 255, 0.95);  /* white banner behind text */
 				text-align: center;
-				padding-bottom: 0.5em;
+				padding: 0.5em 0 0.7em 0;
 			}
 
 			/* Reset list styling inside this nav */
@@ -43,39 +43,40 @@
 
 			.home-nav-style #banner .nav-over-banner > ul > li {
 				display: inline-block;
-				margin: 0 0.5em;
+				margin: 0 0.4em;
 			}
 
-			/* BIG, BOLD NAV TEXT WITH IMAGE FILL */
+			/* BIG NAV TEXT, FILLED WITH LOWER PART OF THE PAINTING */
 			.home-nav-style #banner .nav-over-banner > ul > li a {
 				text-decoration: none;
 				display: inline-block;
 
 				/* spacing around each word */
-				padding: 0.3em 0.7em;
+				padding: 0.25em 0.6em;
 
 				/* font styling */
 				font-size: 2rem;
 				font-weight: 800;
 				letter-spacing: 0.02em;
 
-				/* picture fill */
+				/* text uses the painting as fill */
 				color: transparent;
 				-webkit-text-fill-color: transparent;
 				-webkit-background-clip: text;
 				background-clip: text;
 
-				/* approximate continuation using same image */
+				/* approximate continuation from the *bottom* of the image */
 				background-image: url("images/banner.jpg");
 				background-size: cover;
-				background-position: center bottom;
+				/* try to pull color from lower area of the painting */
+				background-position: center 80%;
 
 				transition: filter 0.3s ease;
 			}
 
-			/* Hover: slightly brighter */
+			/* Hover: slightly brighter but same fill */
 			.home-nav-style #banner .nav-over-banner > ul > li:hover a {
-				filter: brightness(1.2);
+				filter: brightness(1.15);
 			}
 
 			/* Current/active page: a bit bolder */
@@ -102,8 +103,6 @@
 					</ul>
 				</nav>
 			</section>
-
-			<!-- You can add main content here later if you want -->
 
 			<!-- Footer -->
 			<div id="footer">
