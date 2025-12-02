@@ -76,15 +76,19 @@
             }
 
             /* MOBILE OVERRIDES: ONLY phones (<= 736px wide) */
-			@media screen and (max-width: 736px) {
+@media screen and (max-width: 736px) {
 
-				/* Hide the top horizontal nav on phones */
-		#nav {
-			display: none;
-		}
+    .welcome-text {
+        margin-left: 1em !important; /* or 0 if you want fully flush */
+        font-size: 1.15em; /* optional, for better mobile readability */
+    }
 
-		</style>
-	</head>
+    /* Hide the top horizontal nav on phones */
+    #nav {
+        display: none;
+    }
+
+}
 
 	<body class="is-preload home-nav-style">
 		<div id="page-wrapper">
@@ -150,6 +154,7 @@
 
     </body>
 </html>
+
 
 
 
