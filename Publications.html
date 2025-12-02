@@ -31,7 +31,7 @@
             margin-left: 0;
         }
 
-        /* Desktop nav styling */
+        /* DESKTOP NAV TEXT WITH IMAGE FILL (same as Teaching) */
         .home-nav-style #nav > ul > li a {
             text-decoration: none;
             border: 0;
@@ -43,6 +43,7 @@
             background-image: url("images/banner.jpg");
             background-size: 800%;
             background-repeat: no-repeat;
+            background-position: left top;
             -webkit-background-clip: text;
             color: transparent;
             transition: all 0.3s ease;
@@ -50,34 +51,31 @@
 
         .home-nav-style #nav > ul > li:hover a {
             filter: brightness(1.3);
+            color: transparent;
+            -webkit-background-clip: text;
         }
 
-        .home-nav-style #nav > ul > li.current a {
+        .home-nav-style #nav > ul > li.current a,
+        .home-nav-style #nav > ul > li.active a {
             font-weight: 900;
+            color: transparent;
+            -webkit-background-clip: text;
         }
 
-        /* Publications text block (same indent as Teaching) */
+        /* Publications page content padding (desktop) – mirror Teaching */
         .publications-content {
             padding-left: 3em;
         }
 
-        /* Bullet list styling */
-        .publications-content ul {
-            list-style: disc !important;
-            margin-left: 1.4em !important;
-            padding-left: 0 !important;
-            margin-top: 0.2em !important;
-            margin-bottom: 0.6em !important;
-        }
-
-        .publications-content li {
-            margin: 0.1em 0 !important;
-            line-height: 1.25em;
-        }
-
-        /* Mobile */
+        /* MOBILE OVERRIDES – mirror Teaching */
         @media screen and (max-width: 736px) {
-            #nav { display: none; }
+
+            /* Hide horizontal nav on phones */
+            #nav {
+                display: none;
+            }
+
+            /* Fix text indent on phones */
             .publications-content {
                 padding-left: 0.5em;
                 padding-right: 0.5em;
@@ -89,12 +87,12 @@
 <body class="is-preload home-nav-style">
     <div id="page-wrapper">
 
-        <!-- Hidden header for mobile -->
+        <!-- Hidden header for mobile title bar -->
         <div id="header" style="display:none;">
             <h1 id="logo">Alissa Siara</h1>
         </div>
 
-        <!-- Navigation -->
+        <!-- Navigation (desktop) -->
         <nav id="nav">
             <ul>
                 <li><a href="index.html">Alissa Siara</a></li>
@@ -110,31 +108,27 @@
             <div class="container">
                 <div id="content" class="publications-content">
 
+                    <!-- Content -->
                     <article>
+                        <p>
+                            <strong>Working Papers</strong><br>
+                            • Sustaining reforms in weak institutional contexts: Insights from education in Brazil.<br>
+                            • Conditional cash transfers and the absence of cross-domain policy feedback effects.<br>
+                            • Getting politics out of the classroom: Reforms in personnel recruitment across Brazilian municipalities (with Lorenzo Mascioli).
+                            <br><br>
 
-                        <p><strong>Working Papers</strong></p>
-                        <ul>
-                            <li>Sustaining reforms in weak institutional contexts: Insights from education in Brazil.</li>
-                            <li>Conditional cash transfers and the absence of cross-domain policy feedback effects.</li>
-                            <li>Getting politics out of the classroom: Reforms in personnel recruitment across Brazilian municipalities (with Lorenzo Mascioli).</li>
-                        </ul>
+                            <strong>Book Projects</strong><br>
+                            • Sustaining Reforms Despite the Odds.
+                            <br><br>
 
-                        <p><strong>Book Projects</strong></p>
-                        <ul>
-                            <li>Sustaining Reforms Despite the Odds.</li>
-                        </ul>
+                            <strong>Policy Briefs</strong><br>
+                            • Bilotta, N., &amp; Siara, A. (2020). Could a Bridge between the EU and Latin America Boost Innovation “Sovereignty” in a Multipolar World? <em>IAI Papers</em>, 20(19).<br>
+                            • Bilotta, N., &amp; Siara, A. (2020). From Strategic Autonomy to the Internationalization of the Euro: Europe’s Challenges and the Impact of the COVID-19 Crisis. <em>IAI Commentaries</em>, 12(17).
+                            <br><br>
 
-                        <p><strong>Policy Briefs</strong></p>
-                        <ul>
-                            <li>Bilotta, N., &amp; Siara, A. (2020). Could a Bridge between the EU and Latin America Boost Innovation “Sovereignty” in a Multipolar World? <em>IAI Papers</em>, 20(19).</li>
-                            <li>Bilotta, N., &amp; Siara, A. (2020). From Strategic Autonomy to the Internationalization of the Euro: Europe’s Challenges and the Impact of the COVID-19 Crisis. <em>IAI Commentaries</em>, 12(17).</li>
-                        </ul>
-
-                        <p><strong>Book Reviews</strong></p>
-                        <ul>
-                            <li>Siara, A. (2020). Review of <em>A New Foreign Policy: Beyond American Exceptionalism</em>, by J. Sachs. <em>The International Spectator</em>, 55(3).</li>
-                        </ul>
-
+                            <strong>Book Reviews</strong><br>
+                            • Siara, A. (2020). Review of <em>A New Foreign Policy: Beyond American Exceptionalism</em>, by J. Sachs. <em>The International Spectator</em>, 55(3).
+                        </p>
                     </article>
 
                 </div>
