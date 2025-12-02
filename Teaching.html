@@ -11,90 +11,80 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
 
-        <!-- NAV STYLES (same as index/about/publications) -->
-        <style>
-            /* WHITE NAV BAR */
-            .home-nav-style #nav {
-                background-color: white !important;
-                background-image: none !important;
-            }
+<!-- NAV STYLES (same as index/about/publications) -->
+<style>
 
-            /* Spread nav items evenly across full width */
-            .home-nav-style #nav > ul {
-                display: flex;
-                justify-content: space-between; /* first left, last right, even spacing */
-                align-items: center;
-                margin: 0;
-                padding: 0 3.2em; /* equal left and right inset */
-            }
-
-            /* Remove Arcana’s default extra li margin */
-            .home-nav-style #nav > ul > li {
-                margin-left: 0;
-            }
-
-            /* DESKTOP: BIGGER NAV TEXT WITH IMAGE FILL */
-            .home-nav-style #nav > ul > li a {
-                text-decoration: none;
-                border: 0;
-                display: block;
-
-                /* space around text */
-                padding: 1.8em 1em 1em 1em;
-
-                /* big + bold */
-                font-size: 2rem;
-                font-weight: 800;
-
-                /* letter spacing */
-                letter-spacing: 0.08em;
-
-                /* painting inside letters */
-                background-image: url("images/banner.jpg");
-                background-size: 800%;
-                background-repeat: no-repeat;
-                background-position: left top;
-                -webkit-background-clip: text;
-                color: transparent;
-
-                transition: all 0.3s ease;
-            }
-
-            /* Hover = brighter picture fill */
-            .home-nav-style #nav > ul > li:hover a {
-                filter: brightness(1.3);
-                color: transparent;
-                -webkit-background-clip: text;
-            }
-
-            /* Current page = extra bold */
-            .home-nav-style #nav > ul > li.current a,
-            .home-nav-style #nav > ul > li.active a {
-                font-weight: 900;
-                color: transparent;
-                -webkit-background-clip: text;
-            }
-
-            /* MOBILE OVERRIDES: ONLY phones (<= 736px wide) */
-@media screen and (max-width: 736px) {
-
-    .welcome-text {
-        margin-left: 1em !important; /* or 0 if you want fully flush */
-        font-size: 1.15em; /* optional, for better mobile readability */
+    /* WHITE NAV BAR */
+    .home-nav-style #nav {
+        background-color: white !important;
+        background-image: none !important;
     }
 
-    /* Hide the top horizontal nav on phones */
-    #nav {
-        display: none;
+    /* Spread nav items evenly across full width */
+    .home-nav-style #nav > ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0 3.2em;
     }
 
-}
+    /* Remove Arcana’s default extra li margin */
+    .home-nav-style #nav > ul > li {
+        margin-left: 0;
+    }
 
-	<body class="is-preload home-nav-style">
-		<div id="page-wrapper">
-			<div id="header" style="display:none;">
-    <h1 id="logo">Alissa Siara</h1>
-</div>
+    /* DESKTOP NAV TEXT WITH IMAGE FILL */
+    .home-nav-style #nav > ul > li a {
+        text-decoration: none;
+        border: 0;
+        display: block;
+        padding: 1.8em 1em 1em 1em;
+        font-size: 2rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        background-image: url("images/banner.jpg");
+        background-size: 800%;
+        background-repeat: no-repeat;
+        background-position: left top;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    /* Hover = brighter picture fill */
+    .home-nav-style #nav > ul > li:hover a {
+        filter: brightness(1.3);
+        color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    /* Current page = extra bold */
+    .home-nav-style #nav > ul > li.current a,
+    .home-nav-style #nav > ul > li.active a {
+        font-weight: 900;
+        color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    /* MOBILE OVERRIDES: ONLY phones (<= 736px wide) */
+    @media screen and (max-width: 736px) {
+
+        /* Adjust welcome text on mobile */
+        .welcome-text {
+            margin-left: 1em !important;
+            font-si
+
+			</head>
+
+<body class="is-preload home-nav-style">
+    <div id="page-wrapper">
+
+        <!-- Hidden header for mobile menu title -->
+        <div id="header" style="display:none;">
+            <h1 id="logo">Alissa Siara</h1>
+        </div>
+
 
             <!-- Navigation (same as other pages) -->
             <nav id="nav">
@@ -154,6 +144,7 @@
 
     </body>
 </html>
+
 
 
 
