@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 
-    <!-- NAV + MOBILE + INDENT STYLES -->
     <style>
         /* WHITE NAV BAR */
         .home-nav-style #nav {
@@ -19,7 +18,7 @@
             background-image: none !important;
         }
 
-        /* Spread nav items evenly across full width */
+        /* Spread nav items evenly */
         .home-nav-style #nav > ul {
             display: flex;
             justify-content: space-between;
@@ -28,74 +27,64 @@
             padding: 0 3.2em;
         }
 
-        /* Remove Arcana’s default extra li margin */
         .home-nav-style #nav > ul > li {
             margin-left: 0;
         }
 
-        /* DESKTOP: BIGGER NAV TEXT WITH IMAGE FILL */
+        /* Desktop nav style */
         .home-nav-style #nav > ul > li a {
             text-decoration: none;
             border: 0;
             display: block;
-
-            /* space around text */
             padding: 1.8em 1em 1em 1em;
-
-            /* big + bold */
             font-size: 2rem;
             font-weight: 800;
-
-            /* letter spacing */
             letter-spacing: 0.08em;
-
-            /* painting inside letters */
             background-image: url("images/banner.jpg");
             background-size: 800%;
             background-repeat: no-repeat;
-            background-position: left top;
             -webkit-background-clip: text;
             color: transparent;
-
             transition: all 0.3s ease;
         }
 
         .home-nav-style #nav > ul > li:hover a {
             filter: brightness(1.3);
-            color: transparent;
-            -webkit-background-clip: text;
         }
 
-        .home-nav-style #nav > ul > li.current a,
-        .home-nav-style #nav > ul > li.active a {
+        .home-nav-style #nav > ul > li.current a {
             font-weight: 900;
-            color: transparent;
-            -webkit-background-clip: text;
         }
 
-        /* Publications page content padding */
         .publications-content {
             padding-left: 3em;
         }
 
-        /* ✨ Reduce space above ALL section titles */
+        /* Section title spacing */
         .publications-content h2 {
             margin-top: 1em !important;
             margin-bottom: 0.4em !important;
         }
 
-        /* ✨ Restore Arcana’s normal top spacing so this page matches other sections */
+        /* ✨ Clean bullet lists with no extra vertical space */
+        .publications-content ul {
+            margin: 0.2em 0 0.8em 1.2em !important; /* tight top, normal bottom */
+            padding: 0 !important;
+        }
+
+        .publications-content li {
+            margin: 0 !important;
+            padding: 0.15em 0 !important;   /* very tight spacing */
+            line-height: 1.25em;
+        }
+
+        /* Match Arcana’s default top spacing for consistency */
         .wrapper.style1 {
             padding-top: 4em !important;
         }
 
-        /* MOBILE OVERRIDES */
         @media screen and (max-width: 736px) {
-
-            #nav {
-                display: none;
-            }
-
+            #nav { display: none; }
             .publications-content {
                 padding-left: 0.5em;
                 padding-right: 0.5em;
@@ -107,7 +96,7 @@
 <body class="is-preload home-nav-style">
     <div id="page-wrapper">
 
-        <!-- Hidden header for mobile title bar -->
+        <!-- Hidden header for mobile -->
         <div id="header" style="display:none;">
             <h1 id="logo">Alissa Siara</h1>
         </div>
@@ -129,42 +118,30 @@
                 <div id="content" class="publications-content">
 
                     <article>
-                        <header>
-                            <h2>Working Papers</h2>
-                        </header>
 
-                        <p>Sustaining reforms in weak institutional contexts: Insights from education in Brazil.</p>
-                        <p>Conditional cash transfers and the absence of cross-domain policy feedback effects.</p>
-                        <p>Getting politics out of the classroom: Reforms in personnel recruitment across Brazilian municipalities (with Lorenzo Mascioli).</p>
+                        <header><h2>Working Papers</h2></header>
+                        <ul>
+                            <li>Sustaining reforms in weak institutional contexts: Insights from education in Brazil.</li>
+                            <li>Conditional cash transfers and the absence of cross-domain policy feedback effects.</li>
+                            <li>Getting politics out of the classroom: Reforms in personnel recruitment across Brazilian municipalities (with Lorenzo Mascioli).</li>
+                        </ul>
 
-                        <header>
-                            <h2>Book Projects</h2>
-                        </header>
+                        <header><h2>Book Projects</h2></header>
+                        <ul>
+                            <li>Sustaining Reforms Despite the Odds.</li>
+                        </ul>
 
-                        <p>Sustaining Reforms Despite the Odds.</p>
+                        <header><h2>Policy Briefs</h2></header>
+                        <ul>
+                            <li>Bilotta, N., &amp; Siara, A. (2020). Could a Bridge between the EU and Latin America Boost Innovation “Sovereignty” in a Multipolar World? <em>IAI Papers</em>, 20(19).</li>
+                            <li>Bilotta, N., &amp; Siara, A. (2020). From Strategic Autonomy to the Internationalization of the Euro: Europe’s Challenges and the Impact of the COVID-19 Crisis. <em>IAI Commentaries</em>, 12(17).</li>
+                        </ul>
 
-                        <header>
-                            <h2>Policy Briefs</h2>
-                        </header>
+                        <header><h2>Book Reviews</h2></header>
+                        <ul>
+                            <li>Siara, A. (2020). Review of <em>A New Foreign Policy: Beyond American Exceptionalism</em>, by J. Sachs. <em>The International Spectator</em>, 55(3).</li>
+                        </ul>
 
-                        <p>
-                            Bilotta, N., &amp; Siara, A. (2020). Could a Bridge between the EU and Latin America Boost Innovation
-                            “Sovereignty” in a Multipolar World? <em>IAI Papers</em>, 20(19).
-                        </p>
-
-                        <p>
-                            Bilotta, N., &amp; Siara, A. (2020). From Strategic Autonomy to the Internationalization of the Euro:
-                            Europe’s Challenges and the Impact of the COVID-19 Crisis. <em>IAI Commentaries</em>, 12(17).
-                        </p>
-
-                        <header>
-                            <h2>Book Reviews</h2>
-                        </header>
-
-                        <p>
-                            Siara, A. (2020). Review of the book <em>A New Foreign Policy: Beyond American Exceptionalism</em>,
-                            by J. Sachs. <em>The International Spectator</em>, 55(3).
-                        </p>
                     </article>
 
                 </div>
@@ -185,7 +162,6 @@
 
     </div>
 
-    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
