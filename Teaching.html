@@ -11,80 +11,79 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
 
-<!-- NAV STYLES (same as index/about/publications) -->
-<style>
+        <!-- NAV STYLES (same as index/about/publications) -->
+        <style>
+            /* WHITE NAV BAR */
+            .home-nav-style #nav {
+                background-color: white !important;
+                background-image: none !important;
+            }
 
-    /* WHITE NAV BAR */
-    .home-nav-style #nav {
-        background-color: white !important;
-        background-image: none !important;
-    }
+            /* Spread nav items evenly across full width */
+            .home-nav-style #nav > ul {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                padding: 0 3.2em;
+            }
 
-    /* Spread nav items evenly across full width */
-    .home-nav-style #nav > ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0;
-        padding: 0 3.2em;
-    }
+            /* Remove Arcana’s default extra li margin */
+            .home-nav-style #nav > ul > li {
+                margin-left: 0;
+            }
 
-    /* Remove Arcana’s default extra li margin */
-    .home-nav-style #nav > ul > li {
-        margin-left: 0;
-    }
+            /* DESKTOP NAV TEXT WITH IMAGE FILL */
+            .home-nav-style #nav > ul > li a {
+                text-decoration: none;
+                border: 0;
+                display: block;
+                padding: 1.8em 1em 1em 1em;
+                font-size: 2rem;
+                font-weight: 800;
+                letter-spacing: 0.08em;
+                background-image: url("images/banner.jpg");
+                background-size: 800%;
+                background-repeat: no-repeat;
+                background-position: left top;
+                -webkit-background-clip: text;
+                color: transparent;
+                transition: all 0.3s ease;
+            }
 
-    /* DESKTOP NAV TEXT WITH IMAGE FILL */
-    .home-nav-style #nav > ul > li a {
-        text-decoration: none;
-        border: 0;
-        display: block;
-        padding: 1.8em 1em 1em 1em;
-        font-size: 2rem;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        background-image: url("images/banner.jpg");
-        background-size: 800%;
-        background-repeat: no-repeat;
-        background-position: left top;
-        -webkit-background-clip: text;
-        color: transparent;
-        transition: all 0.3s ease;
-    }
+            /* Hover = brighter picture fill */
+            .home-nav-style #nav > ul > li:hover a {
+                filter: brightness(1.3);
+                color: transparent;
+                -webkit-background-clip: text;
+            }
 
-    /* Hover = brighter picture fill */
-    .home-nav-style #nav > ul > li:hover a {
-        filter: brightness(1.3);
-        color: transparent;
-        -webkit-background-clip: text;
-    }
+            /* Current page = extra bold */
+            .home-nav-style #nav > ul > li.current a,
+            .home-nav-style #nav > ul > li.active a {
+                font-weight: 900;
+                color: transparent;
+                -webkit-background-clip: text;
+            }
 
-    /* Current page = extra bold */
-    .home-nav-style #nav > ul > li.current a,
-    .home-nav-style #nav > ul > li.active a {
-        font-weight: 900;
-        color: transparent;
-        -webkit-background-clip: text;
-    }
+            /* MOBILE OVERRIDES: ONLY phones (<= 736px wide) */
+            @media screen and (max-width: 736px) {
 
-    /* MOBILE OVERRIDES: ONLY phones (<= 736px wide) */
-    @media screen and (max-width: 736px) {
+                /* Hide the top horizontal nav on phones */
+                #nav {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
 
-        /* Adjust welcome text on mobile */
-        .welcome-text {
-            margin-left: 1em !important;
-            font-si
+    <body class="is-preload home-nav-style">
+        <div id="page-wrapper">
 
-			</head>
-
-<body class="is-preload home-nav-style">
-    <div id="page-wrapper">
-
-        <!-- Hidden header for mobile menu title -->
-        <div id="header" style="display:none;">
-            <h1 id="logo">Alissa Siara</h1>
-        </div>
-
+            <!-- Hidden header for mobile menu title -->
+            <div id="header" style="display:none;">
+                <h1 id="logo">Alissa Siara</h1>
+            </div>
 
             <!-- Navigation (same as other pages) -->
             <nav id="nav">
@@ -106,15 +105,15 @@
                         <article>
                             <p>
                                 <strong>University of Zurich, Lecturer, BA Seminar, Spring 2025</strong>
-								<br>
-								Social Policy and Development in the Global South
-								<br><br>
-								<strong>University of Lucerne, Lecturer, MA Seminar, Spring 2025</strong>
-								<br>
-								The Developmental Welfare State, supervision of four 6-credit theses
-								<br><br>
-								The course, which I adapted for undergraduate and graduate students, offers an introduction to the political economy of social policy in low- and middle-income countries. We examine why countries facing similar development challenges adopt very different approaches to social protection, education, healthcare, and labor markets, and why some social programs have expanded while others were rolled back.
-								In a country case study, students apply the “3 I’s” framework (interests, institutions, and ideas ) to analyze how political and economic forces have shaped the adoption and evolution of a social policy of their choice. 
+                                <br>
+                                Social Policy and Development in the Global South
+                                <br><br>
+                                <strong>University of Lucerne, Lecturer, MA Seminar, Spring 2025</strong>
+                                <br>
+                                The Developmental Welfare State, supervision of four 6-credit theses
+                                <br><br>
+                                The course, which I adapted for undergraduate and graduate students, offers an introduction to the political economy of social policy in low- and middle-income countries. We examine why countries facing similar development challenges adopt very different approaches to social protection, education, healthcare, and labor markets, and why some social programs have expanded while others were rolled back.
+                                In a country case study, students apply the “3 I’s” framework (interests, institutions, and ideas) to analyze how political and economic forces have shaped the adoption and evolution of a social policy of their choice.
                             </p>
                         </article>
 
@@ -123,16 +122,18 @@
             </section>
 
             <!-- Footer -->
-		<div id="footer" style="padding-top: 0.5em; padding-bottom: 0.5em;">
-			<div class="container">
-				<div class="copyright">
-					<ul class="menu">
-						<li>&copy; 2025 Alissa Siara. All rights reserved.</li>
-						<li>Design: HTML5 UP</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+            <div id="footer" style="padding-top: 0.5em; padding-bottom: 0.5em;">
+                <div class="container">
+                    <div class="copyright">
+                        <ul class="menu">
+                            <li>&copy; 2025 Alissa Siara. All rights reserved.</li>
+                            <li>Design: HTML5 UP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
         <!-- Scripts -->
         <script src="assets/js/jquery.min.js"></script>
@@ -140,17 +141,4 @@
         <script src="assets/js/browser.min.js"></script>
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-
-    </body>
-</html>
-
-
-
-
-
-
-
-
-
-
+        <script src="assets/js/main.js"></sc
