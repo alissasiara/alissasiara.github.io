@@ -50,4 +50,140 @@
             background-position: left top;
             -webkit-background-clip: text;
             color: transparent;
-            tran
+            transition: all 0.3s ease;
+        }
+
+        /* Hover = brighter picture fill */
+        .home-nav-style #nav > ul > li:hover a {
+            filter: brightness(1.3);
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        /* Current page = extra bold */
+        .home-nav-style #nav > ul > li.current a,
+        .home-nav-style #nav > ul > li.active a {
+            font-weight: 900;
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        /* ABOUT PAGE DESKTOP LAYOUT */
+        .about-content {
+            padding-left: 3em;
+        }
+
+        .about-photo span.image {
+            display: block;
+            margin-right: 3em;
+        }
+
+        /* MOBILE OVERRIDES: ONLY phones (<= 736px wide) */
+        @media screen and (max-width: 736px) {
+
+            /* Hide top nav on mobile */
+            #nav {
+                display: none;
+            }
+
+            /* Fix text indent */
+            .about-content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+
+            /* Better mobile photo layout */
+            .about-photo span.image {
+                margin: 0 auto 1.2em auto;  /* center + bottom spacing */
+                max-width: 220px;
+            }
+
+            .about-photo span.image img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            /* 🔥 Equal top & bottom padding on mobile */
+            section.wrapper.style1 {
+                padding-top: 1.5em !important;
+                padding-bottom: 1.5em !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload home-nav-style">
+    <div id="page-wrapper">
+
+        <!-- Hidden header for mobile title bar -->
+        <div id="header" style="display:none;">
+            <h1 id="logo">Alissa Siara</h1>
+        </div>
+
+        <!-- Navigation -->
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Alissa Siara</a></li>
+                <li class="current"><a href="About.html">About</a></li>
+                <li><a href="Publications.html">Publications</a></li>
+                <li><a href="Teaching.html">Teaching</a></li>
+                <li><a href="CV.html">CV</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <section class="wrapper style1">
+            <div class="container">
+                <article>
+                    <div class="row gtr-50 about-content">
+                        
+                        <!-- Left: Photo -->
+                        <div class="col-4 col-12-narrower about-photo">
+                            <span class="image fit">
+                                <img src="images/pic1.jpg" alt="Alissa Siara" />
+                            </span>
+                        </div>
+
+                        <!-- Right: Text -->
+                        <div class="col-8 col-12-narrower">
+                            <p>
+                                I am a PhD Researcher in Political Science at the European University Institute.
+                                I work in the fields of comparative politics and public policy, with a focus on social policy (particularly education policy) and a regional focus on Latin America.
+                                In my dissertation, I study the conditions under which policies attain “staying power” in contexts marked by frequent and radical institutional change, with an empirical focus on subnational Brazil.
+                                <br><br>
+                                Currently, I am a Fulbright Visiting Student at the MIT Department of Political Science. I was a Visiting Researcher at the University of Zurich and the Fundação Getulio Vargas. I hold a MSc in International Political Economy from the London School of Economics and Political Science.
+                                <br><br>
+                                You can contact me at <a href="mailto:alissa.siara@eui.eu">alissa.siara@eui.eu</a>.
+                            </p>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div id="footer" style="padding-top: 0.5em; padding-bottom: 0.5em;">
+            <div class="container">
+                <div class="copyright">
+                    <ul class="menu">
+                        <li>&copy; 2025 Alissa Siara. All rights reserved.</li>
+                        <li>Design: HTML5 UP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
