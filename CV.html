@@ -75,29 +75,22 @@
                 -webkit-background-clip: text;
             }
 
-            /* 📱 Mobile (<=736px) */
-            @media screen and (max-width: 736px) {
-                .home-nav-style #nav > ul {
-                    padding: 0 1em;
-                }
+            /* MOBILE OVERRIDES: ONLY phones (<= 736px wide) */
+			@media screen and (max-width: 736px) {
 
-                .home-nav-style #nav > ul > li a {
-                    font-size: 1.2rem !important;
-                    font-weight: 700 !important;
-                    letter-spacing: 0.02em !important;
-                    padding: 0.8em 0.6em !important;
+				/* Hide the top horizontal nav on phones */
+		#nav {
+			display: none;
+		}
 
-                    background-image: none !important;
-                    color: #0f3d4d !important;
-                    filter: none !important;
-                    -webkit-background-clip: border-box !important;
-                }
-            }
-        </style>
-    </head>
+		</style>
+	</head>
 
-    <body class="is-preload home-nav-style">
-        <div id="page-wrapper">
+	<body class="is-preload home-nav-style">
+		<div id="page-wrapper">
+			<div id="header" style="display:none;">
+    <h1 id="logo">Alissa Siara</h1>
+</div>
 
             <!-- NAV (matching all other pages) -->
             <nav id="nav">
