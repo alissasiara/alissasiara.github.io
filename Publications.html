@@ -60,14 +60,12 @@
             transition: all 0.3s ease;
         }
 
-        /* Hover = brighter picture fill */
         .home-nav-style #nav > ul > li:hover a {
             filter: brightness(1.3);
             color: transparent;
             -webkit-background-clip: text;
         }
 
-        /* Current page = extra bold */
         .home-nav-style #nav > ul > li.current a,
         .home-nav-style #nav > ul > li.active a {
             font-weight: 900;
@@ -82,24 +80,22 @@
 
         /* ✨ Reduce space above ALL section titles */
         .publications-content h2 {
-            margin-top: 0.6em !important;
+            margin-top: 1em !important;
             margin-bottom: 0.4em !important;
         }
 
-        /* ✨ Reduce space between nav and the first title */
+        /* ✨ Restore Arcana’s normal top spacing so this page matches other sections */
         .wrapper.style1 {
-            padding-top: 1.2em !important;
+            padding-top: 4em !important;
         }
 
         /* MOBILE OVERRIDES */
         @media screen and (max-width: 736px) {
 
-            /* Hide desktop nav */
             #nav {
                 display: none;
             }
 
-            /* Reduce indentation on phones */
             .publications-content {
                 padding-left: 0.5em;
                 padding-right: 0.5em;
