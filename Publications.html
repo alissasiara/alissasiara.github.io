@@ -56,33 +56,38 @@
             font-weight: 900;
         }
 
+        /* Content area */
         .publications-content {
             padding-left: 3em;
         }
 
-        /* Section title spacing */
+        /* Section titles */
         .publications-content h2 {
             margin-top: 1em !important;
             margin-bottom: 0.4em !important;
         }
 
-        /* ✨ Clean bullet lists with no extra vertical space */
+        /* ✨ Actual visible bullet points */
         .publications-content ul {
-            margin: 0.2em 0 0.8em 1.2em !important; /* tight top, normal bottom */
-            padding: 0 !important;
+            list-style: disc !important;       /* show real bullets */
+            margin-left: 1.4em !important;      /* normal indentation */
+            padding-left: 0 !important;
+            margin-top: 0.2em !important;
+            margin-bottom: 0.6em !important;
         }
 
+        /* ✨ tight spacing between items */
         .publications-content li {
-            margin: 0 !important;
-            padding: 0.15em 0 !important;   /* very tight spacing */
+            margin: 0.1em 0 !important;
             line-height: 1.25em;
         }
 
-        /* Match Arcana’s default top spacing for consistency */
+        /* Match other pages */
         .wrapper.style1 {
             padding-top: 4em !important;
         }
 
+        /* Mobile */
         @media screen and (max-width: 736px) {
             #nav { display: none; }
             .publications-content {
