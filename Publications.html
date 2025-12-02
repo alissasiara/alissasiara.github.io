@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>Publications – Alissa Siara</title>
+    <title>Publications</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -19,7 +19,7 @@
             background-image: none !important;
         }
 
-        /* Spread nav items evenly */
+        /* Spread nav items evenly across full width */
         .home-nav-style #nav > ul {
             display: flex;
             justify-content: space-between;
@@ -28,36 +28,46 @@
             padding: 0 3.2em;
         }
 
+        /* Remove Arcana’s default extra li margin */
         .home-nav-style #nav > ul > li {
             margin-left: 0;
         }
 
-        /* DESKTOP NAV TEXT WITH IMAGE FILL */
+        /* DESKTOP: BIGGER NAV TEXT WITH IMAGE FILL */
         .home-nav-style #nav > ul > li a {
             text-decoration: none;
             border: 0;
             display: block;
+
+            /* space around text */
             padding: 1.8em 1em 1em 1em;
+
+            /* big + bold */
             font-size: 2rem;
             font-weight: 800;
+
+            /* letter spacing */
             letter-spacing: 0.08em;
+
+            /* painting inside letters */
             background-image: url("images/banner.jpg");
             background-size: 800%;
             background-repeat: no-repeat;
             background-position: left top;
             -webkit-background-clip: text;
             color: transparent;
+
             transition: all 0.3s ease;
         }
 
-        /* Hover */
+        /* Hover = brighter picture fill */
         .home-nav-style #nav > ul > li:hover a {
             filter: brightness(1.3);
             color: transparent;
             -webkit-background-clip: text;
         }
 
-        /* Current page highlight */
+        /* Current page = extra bold */
         .home-nav-style #nav > ul > li.current a,
         .home-nav-style #nav > ul > li.active a {
             font-weight: 900;
@@ -70,10 +80,10 @@
             padding-left: 3em;
         }
 
-        /* MOBILE OVERRIDES */
+        /* MOBILE OVERRIDES: ONLY phones (<= 736px wide) */
         @media screen and (max-width: 736px) {
 
-            /* Hide horizontal nav on phones */
+            /* Hide the top horizontal nav on phones */
             #nav {
                 display: none;
             }
@@ -95,7 +105,7 @@
             <h1 id="logo">Alissa Siara</h1>
         </div>
 
-        <!-- Navigation -->
+        <!-- Navigation (same as other pages) -->
         <nav id="nav">
             <ul>
                 <li><a href="index.html">Alissa Siara</a></li>
@@ -113,11 +123,41 @@
 
                     <!-- Content -->
                     <article>
-                        <!-- 🔽 Replace this block with your real publications list -->
+                        <header>
+                            <h2>Working Papers</h2>
+                        </header>
+
+                        <p>Sustaining reforms in weak institutional contexts: Insights from education in Brazil.</p>
+                        <p>Conditional cash transfers and the absence of cross-domain policy feedback effects.</p>
+                        <p>Getting politics out of the classroom: Reforms in personnel recruitment across Brazilian municipalities (with Lorenzo Mascioli).</p>
+
+                        <header>
+                            <h2>Book Projects</h2>
+                        </header>
+
+                        <p>Sustaining Reforms Despite the Odds.</p>
+
+                        <header>
+                            <h2>Policy Briefs</h2>
+                        </header>
+
                         <p>
-                            <strong>Publications</strong><br><br>
-                            (Add your articles, working papers, and book chapters here,
-                            using <code>&lt;br&gt;</code> or lists as needed.)
+                            Bilotta, N., &amp; Siara, A. (2020). Could a Bridge between the EU and Latin America Boost Innovation
+                            “Sovereignty” in a Multipolar World? <em>IAI Papers</em>, 20(19).
+                        </p>
+
+                        <p>
+                            Bilotta, N., &amp; Siara, A. (2020). From Strategic Autonomy to the Internationalization of the Euro:
+                            Europe’s Challenges and the Impact of the COVID-19 Crisis. <em>IAI Commentaries</em>, 12(17).
+                        </p>
+
+                        <header>
+                            <h2>Book Reviews</h2>
+                        </header>
+
+                        <p>
+                            Siara, A. (2020). Review of the book <em>A New Foreign Policy: Beyond American Exceptionalism</em>,
+                            by J. Sachs. <em>The International Spectator</em>, 55(3).
                         </p>
                     </article>
 
@@ -132,7 +172,6 @@
                     <ul class="menu">
                         <li>&copy; 2025 Alissa Siara. All rights reserved.</li>
                         <li>Design: HTML5 UP</li>
-                        <li>Painting: Tarsila do Amaral</li>
                     </ul>
                 </div>
             </div>
