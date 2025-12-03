@@ -1,132 +1,221 @@
 <!DOCTYPE HTML>
+<!--
+    Arcana by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license
+-->
 <html>
 <head>
-    <title>Research & Publications</title>
+    <title>Research</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <style>
-        /* Optional: Right-align section labels */
-        .section-label {
-            text-align: right;
-            font-weight: 600;
-            padding-right: 1em;
+        /* WHITE NAV BAR */
+        .home-nav-style #nav {
+            background-color: #ffffff !important;
+            background-image: none !important;
         }
 
-        /* Improve spacing */
+        /* Spread nav items evenly */
+        .home-nav-style #nav > ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            padding: 0 3.2em;
+        }
+
+        .home-nav-style #nav > ul > li {
+            margin-left: 0;
+        }
+
+        /* DESKTOP NAV TEXT WITH IMAGE FILL (same as Teaching) */
+        .home-nav-style #nav > ul > li a {
+            text-decoration: none;
+            border: 0;
+            display: block;
+            padding: 1.2em 1em 1.2em 1em;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            background-image: url("images/banner.jpg");
+            background-size: 800%;
+            background-repeat: no-repeat;
+            background-position: left top;
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .home-nav-style #nav > ul > li:hover a {
+            filter: brightness(1.3);
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        .home-nav-style #nav > ul > li.current a,
+        .home-nav-style #nav > ul > li.active a {
+            font-weight: 900;
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        /* Publications page content padding (desktop) – mirror Teaching */
+        .publications-content {
+            padding-left: 3em;
+        }
+
+        /* Two-column research layout */
         .research-section {
             margin-bottom: 2.5em;
         }
 
+        .section-label {
+            text-align: right;
+            font-weight: 600;
+        }
+
         .research-section ul {
-            margin-top: 0.5em;
+            margin: 0;
+            padding-left: 1.25em;
         }
 
         .research-section li {
-            margin-bottom: 0.75em;
+            margin-bottom: 0.6em;
+        }
+
+        /* MOBILE OVERRIDES – mirror Teaching */
+        @media screen and (max-width: 736px) {
+
+            /* Hide horizontal nav on phones */
+            #nav {
+                display: none;
+            }
+
+            /* Fix text indent on phones */
+            .publications-content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+
+            /* Labels left-aligned on mobile */
+            .section-label {
+                text-align: left;
+                margin-bottom: 0.4em;
+            }
         }
     </style>
 </head>
 
-<body class="is-preload">
+<body class="is-preload home-nav-style">
     <div id="page-wrapper">
 
-        <!-- Header -->
-        <div id="header">
-            <h1><a href="index.html" id="logo">Alissa Siara</a></h1>
+        <!-- Hidden header for mobile title bar -->
+        <div id="header" style="display:none;">
+            <h1 id="logo">Alissa Siara</h1>
         </div>
 
-        <!-- NAVIGATION -->
+        <!-- Navigation (desktop) -->
         <nav id="nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Alissa Siara</a></li>
                 <li class="current"><a href="Research.html">Research</a></li>
                 <li><a href="Teaching.html">Teaching</a></li>
                 <li><a href="CV.html">CV</a></li>
             </ul>
         </nav>
 
-        <!-- MAIN CONTENT -->
+        <!-- Main -->
         <section class="wrapper style1">
             <div class="container">
+                <div id="content" class="publications-content">
 
-                <!-- WORKING PAPERS -->
-                <div class="row research-section">
-                    <div class="col-3 col-12-mobile section-label">
-                        <h3>Working Papers</h3>
-                    </div>
-                    <div class="col-9 col-12-mobile">
-                        <ul>
-                            <li><strong>Staying Power in Social Investment Reforms</strong>  
-                                – Dissertation paper on political coalitions and reform survival in Brazil.
-                            </li>
-                            <li><strong>Meritocratic Selection of School Principals</strong> (with Lorenzo Mascioli)  
-                                – Mixed-methods study of hiring reforms across Brazilian municipalities.
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- Content -->
+                    <article>
+
+                        <!-- WORKING PAPERS -->
+                        <div class="row research-section">
+                            <div class="col-3 col-12-mobile section-label">
+                                Working Papers
+                            </div>
+                            <div class="col-9 col-12-mobile">
+                                <ul>
+                                    <li>
+                                        <strong>Sustaining reforms in weak institutional contexts:</strong>
+                                        Insights from education in Brazil.
+                                    </li>
+                                    <li>
+                                        <strong>Conditional cash transfers and the absence of cross-domain policy feedback effects.</strong>
+                                    </li>
+                                    <li>
+                                        <strong>Getting politics out of the classroom:</strong>
+                                        Reforms in personnel recruitment across Brazilian municipalities (with Lorenzo Mascioli).
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- BOOK PROJECTS -->
+                        <div class="row research-section">
+                            <div class="col-3 col-12-mobile section-label">
+                                Book Projects
+                            </div>
+                            <div class="col-9 col-12-mobile">
+                                <ul>
+                                    <li>
+                                        <strong>Sustaining Reforms Despite the Odds.</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- POLICY BRIEFS -->
+                        <div class="row research-section">
+                            <div class="col-3 col-12-mobile section-label">
+                                Policy Briefs
+                            </div>
+                            <div class="col-9 col-12-mobile">
+                                <ul>
+                                    <li>
+                                        Bilotta, N., &amp; Siara, A. (2020).
+                                        Could a Bridge between the EU and Latin America Boost Innovation “Sovereignty” in a Multipolar World?
+                                        <em>IAI Papers</em>, 20(19).
+                                    </li>
+                                    <li>
+                                        Bilotta, N., &amp; Siara, A. (2020).
+                                        From Strategic Autonomy to the Internationalization of the Euro: Europe’s Challenges and the Impact of the COVID-19 Crisis.
+                                        <em>IAI Commentaries</em>, 12(17).
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- BOOK REVIEWS -->
+                        <div class="row research-section">
+                            <div class="col-3 col-12-mobile section-label">
+                                Book Reviews
+                            </div>
+                            <div class="col-9 col-12-mobile">
+                                <ul>
+                                    <li>
+                                        Siara, A. (2020).
+                                        Review of <em>A New Foreign Policy: Beyond American Exceptionalism</em>, by J. Sachs.
+                                        <em>The International Spectator</em>, 55(3).
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </article>
+
                 </div>
-
-                <hr />
-
-                <!-- BOOK PROJECT -->
-                <div class="row research-section">
-                    <div class="col-3 col-12-mobile section-label">
-                        <h3>Book Project</h3>
-                    </div>
-                    <div class="col-9 col-12-mobile">
-                        <ul>
-                            <li><strong>The Staying Power of Social Investment Reforms</strong>  
-                                – Book manuscript from dissertation, focused on teachers’ unions and reform continuity in weak institutional environments.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <hr />
-
-                <!-- ARTICLES -->
-                <div class="row research-section">
-                    <div class="col-3 col-12-mobile section-label">
-                        <h3>Articles</h3>
-                    </div>
-                    <div class="col-9 col-12-mobile">
-                        <ul>
-                            <li><strong>Housing Policy & Electoral Returns in South Africa</strong>  
-                                – Analysis of RDP housing effects on voter behavior.
-                            </li>
-                            <li><strong>Conditional Cash Transfers & Policy Feedback</strong>  
-                                – Cross-domain feedback effects of Bolsa Família.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <hr />
-
-                <!-- OTHER PROJECTS -->
-                <div class="row research-section">
-                    <div class="col-3 col-12-mobile section-label">
-                        <h3>Other Projects</h3>
-                    </div>
-                    <div class="col-9 col-12-mobile">
-                        <ul>
-                            <li><strong>Teacher Politics in Latin America</strong>  
-                                – Ongoing collaboration with Ben Ross Schneider.
-                            </li>
-                            <li><strong>Policy Learning in Weak Institutions</strong>  
-                                – Comparative study of local bureaucracies.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
         </section>
 
-        <!-- FOOTER -->
-        <div id="footer">
+        <!-- Footer -->
+        <div id="footer" style="padding-top: 0.5em; padding-bottom: 0.5em;">
             <div class="container">
                 <div class="copyright">
                     <ul class="menu">
@@ -149,4 +238,3 @@
 
 </body>
 </html>
-
