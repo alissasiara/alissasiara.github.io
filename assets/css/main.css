@@ -2697,7 +2697,9 @@ input, select, textarea {
 
 		.wrapper.style1 {
 			background: #fff;
-		}
+			margin-top: 0 !important;
+    padding-top: 1.5em !important;  /* adjust to taste */
+}
 
 		.wrapper.style2 {
 			background-color: #fff;
